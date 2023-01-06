@@ -15,15 +15,17 @@ import App from "./App";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <PictureProvider>
-      <SearchProvider>
-        <FilterProvider>
-          <SearchQueriesProvider>
-            <App />
-          </SearchQueriesProvider>
-        </FilterProvider>
-      </SearchProvider>
-    </PictureProvider>
-  </BrowserRouter>
+  <React.StrictMode>
+    <BrowserRouter>
+      <PictureProvider>
+        <SearchProvider>
+          <FilterProvider>
+            <SearchQueriesProvider>
+              <App />
+            </SearchQueriesProvider>
+          </FilterProvider>
+        </SearchProvider>
+      </PictureProvider>
+    </BrowserRouter>
+  </React.StrictMode>
 );
