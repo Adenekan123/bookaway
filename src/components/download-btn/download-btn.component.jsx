@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useRef } from "react";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -12,9 +12,9 @@ import MenuList from "@mui/material/MenuList";
 import { saveAs } from "file-saver";
 
 export default function DownloadBtn({ options }) {
-  const [open, setOpen] = React.useState(false);
-  const anchorRef = React.useRef(null);
-  const [selectedIndex, setSelectedIndex] = React.useState("original");
+  const [open, setOpen] = useState(false);
+  const anchorRef = useRef(null);
+  const [selectedIndex, setSelectedIndex] = useState("original");
 
   const handleClick = () => {
     saveAs(options[selectedIndex], "image.jpg"); // Put your image url here.
@@ -38,7 +38,7 @@ export default function DownloadBtn({ options }) {
   };
 
   return (
-    <React.Fragment>
+    <>
       <ButtonGroup
         variant="contained"
         color="info"
@@ -90,6 +90,6 @@ export default function DownloadBtn({ options }) {
           </Grow>
         )}
       </Popper>
-    </React.Fragment>
+    </>
   );
 }

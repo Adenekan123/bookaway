@@ -60,7 +60,6 @@ const Picture = () => {
               {photo && (
                 <Typography
                   margin={"20px"}
-                  onClick={() => window.open(photo.photographer_url, "_blank")}
                   sx={{ textDecoration: "underline", cursor: "pointer" }}>
                   Photo By {photo.photographer}
                 </Typography>

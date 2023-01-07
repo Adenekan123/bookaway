@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -21,7 +21,7 @@ import {
 import SearchItem from "../../searchItem/searchItem.component";
 
 const UserMemu = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
