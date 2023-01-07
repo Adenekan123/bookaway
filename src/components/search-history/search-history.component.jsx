@@ -6,7 +6,7 @@ import { SearchQueriesContext } from "../../contexts/search-queries.context";
 import { defaultQueries } from "../../contexts/search-queries.context";
 import { SearchContext } from "../../contexts/search.context";
 
-function SearchHistory() {
+const SearchHistory = () => {
   const { queries, removeQuery } = useContext(SearchQueriesContext);
   const { putQuery } = useContext(SearchContext);
 
@@ -43,6 +43,6 @@ function SearchHistory() {
       })}
     </Stack>
   );
-}
+};
 
 export default SearchHistory;

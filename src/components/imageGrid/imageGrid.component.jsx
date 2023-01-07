@@ -2,12 +2,8 @@ import React, { useEffect, useState, useContext } from "react";
 
 import { PictureContext } from "../../contexts/pictures.context";
 import {
-  ImageList,
-  ImageListItem,
   ImageListItemBar,
   Grid,
-  Box,
-  CircularProgress,
   Skeleton,
   IconButton,
   Avatar,
@@ -35,7 +31,7 @@ const breakpoints = {
   xl: 1920,
 };
 
-function ImageGrid({ items }) {
+const ImageGrid = ({ items }) => {
   const { loadingRef, isLoading } = useContext(PictureContext);
 
   return (
@@ -79,6 +75,6 @@ function ImageGrid({ items }) {
       </Grid>
     </>
   );
-}
+};
 
 export default ImageGrid;

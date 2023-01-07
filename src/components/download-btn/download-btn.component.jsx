@@ -11,7 +11,7 @@ import MenuList from "@mui/material/MenuList";
 
 import { saveAs } from "file-saver";
 
-export default function DownloadBtn({ options }) {
+const DownloadBtn = ({ options }) => {
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
   const [selectedIndex, setSelectedIndex] = useState("original");
@@ -92,4 +92,6 @@ export default function DownloadBtn({ options }) {
       </Popper>
     </>
   );
-}
+};
+
+export default DownloadBtn;

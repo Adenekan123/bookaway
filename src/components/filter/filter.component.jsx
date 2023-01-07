@@ -19,7 +19,6 @@ import ColorPicker from "../color-picker/color-picker.component.jsx";
 import "./styles.css";
 
 import { FilterContext } from "../../contexts/filter.context.jsx";
-import { SearchContext } from "../../contexts/search.context.jsx";
 
 const Filter = () => {
   const { filter, onFilterChange, resetFilter } = useContext(FilterContext);
